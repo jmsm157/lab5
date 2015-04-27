@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * 
  * @author Johan
  */
-public class Puente {
+public class Puente extends Thread {
     private final Integer distancia;
     private final Integer resistencia;
     
@@ -104,7 +104,7 @@ public class Puente {
     }
     
     public void addCarroDer(Carro carro) {
-        carrosIzq.add(carro);
+        carrosDer.add(carro);
     }
     
     public void addCarroBloqueado(Carro carro) {
@@ -117,7 +117,7 @@ public class Puente {
      */
     public void cambiarSemaforos() {
         try {
-            Thread.sleep(tiempoVacio*1000);
+            sleep(tiempoVacio*1000);
             semaforoDerecho = !semaforoDerecho;
             semaforoIzq = !semaforoIzq;
             
@@ -181,5 +181,10 @@ public class Puente {
                 cambiarSemaforos();
             }
         }
+    }
+    
+    @Override
+    public void run() {
+        pasarCarros();
     }
 }

@@ -46,7 +46,7 @@ public class CreadorCarros extends Thread {
             int valorParaCrear= aleatorio();
             double peso=aleatorio()*100.5;
             double velocidad=(aleatorio()*10.5)/2;
-            Puente p = new Puente();
+            //Puente p = new Puente();
             /**
              * es para ratificar que la velocidad sea menor a 50km/h
              */
@@ -57,12 +57,18 @@ public class CreadorCarros extends Thread {
              */
                 if(valorParaCrear>6){
                     Carro ladoA=new Carro("der",peso,velocidad);
-                    p.addCarroDer(ladoA);              
+                    if(peso<=800)
+                        puente.addCarroDer(ladoA); 
+                    else
+                        puente.addCarroBloqueado(ladoA);
                 }
                 else{
                     if(valorParaCrear<6){
                         Carro ladoB=new Carro("izq",peso,velocidad);
-                        p.addCarroIzq(ladoB);                        
+                        if(peso<=800)
+                            puente.addCarroIzq(ladoB);
+                        else
+                          puente.addCarroBloqueado(ladoB);  
                     }                    
                 }               
             }
@@ -78,6 +84,7 @@ public class CreadorCarros extends Thread {
     @Override
     public void run() {
         crearCarro();
+        puente.start();
     }
     
     public int aleatorio (){

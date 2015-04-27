@@ -79,6 +79,7 @@ public class Carro extends Thread {
             Integer t = tiempo*1000;
             sleep(t.longValue());
             puente.cambiarSemaforos(this);
+            
         } catch (InterruptedException ex) {
             Logger.getLogger(Carro.class.getName()).log(Level.SEVERE, null, ex);
         }
