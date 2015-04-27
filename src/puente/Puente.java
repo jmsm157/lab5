@@ -70,6 +70,23 @@ public class Puente {
         return semaforoIzq;
     }
 
+    public List<Carro> getCarrosIzq() {
+        return carrosIzq;
+    }
+
+    public List<Carro> getCarrosDer() {
+        return carrosDer;
+    }
+
+    public List<Carro> getCarrosBloqueados() {
+        return carrosBloqueados;
+    }
+
+    public List<Carro> getCarrosTerminados() {
+        return carrosTerminados;
+    }
+    
+
     public void setSemaforoIzq(Boolean semaforoIzq) {
         this.semaforoIzq = semaforoIzq;
     }

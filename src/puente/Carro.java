@@ -24,6 +24,9 @@ public class Carro extends Thread {
         this.peso = peso;
         this.velocidad = velocidad;
         this.puente = puente;
+        if(puente != null) {
+            tiempo= ((Double)(puente.getDistancia()/velocidad)).intValue();
+        }
     }
     
     public String getPosicionInicial() {
