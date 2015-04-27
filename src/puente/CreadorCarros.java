@@ -70,11 +70,11 @@ public class CreadorCarros extends Thread {
                         else
                           puente.addCarroBloqueado(ladoB);  
                     }                    
-                }               
+                }
             }
                 
             // Aqui debe crear el carro y mandarlo a la cola indicada.
-            
+            puente.start();
             crearCarro();
         } catch (InterruptedException ex) {
             Logger.getLogger(CreadorCarros.class.getName()).log(Level.SEVERE, null, ex);
