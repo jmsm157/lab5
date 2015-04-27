@@ -56,7 +56,7 @@ public class CreadorCarros extends Thread {
              * indicar si se crea o no carro
              */
                 if(valorParaCrear>6){
-                    Carro ladoA=new Carro("der",peso,velocidad);
+                    Carro ladoA=new Carro("der",peso,velocidad, puente);
                     if(peso<=800)
                         puente.addCarroDer(ladoA); 
                     else
@@ -64,7 +64,7 @@ public class CreadorCarros extends Thread {
                 }
                 else{
                     if(valorParaCrear<6){
-                        Carro ladoB=new Carro("izq",peso,velocidad);
+                        Carro ladoB=new Carro("izq",peso,velocidad, puente);
                         if(peso<=800)
                             puente.addCarroIzq(ladoB);
                         else

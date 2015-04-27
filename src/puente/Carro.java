@@ -19,11 +19,11 @@ public class Carro extends Thread {
     private Integer tiempo;
     private Puente puente;
 
-    public Carro(String posicionInicial, Double peso, Double velocidad) {
+    public Carro(String posicionInicial, Double peso, Double velocidad, Puente puente) {
         this.posicionInicial = posicionInicial;
         this.peso = peso;
         this.velocidad = velocidad;
-        //this.puente = puente;
+        this.puente = puente;
         if(puente != null) {
             tiempo= ((Double)(puente.getDistancia()/velocidad)).intValue();
         }
