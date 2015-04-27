@@ -42,8 +42,8 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="spnTiempo" min="-2" pref="82" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jRadioButton1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnIzq" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnDer" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="93" max="32767" attributes="0"/>
@@ -65,9 +65,9 @@
                   <Component id="spnTiempo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="btnIzq" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+              <Component id="btnDer" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -101,7 +101,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JRadioButton" name="btnIzq">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
@@ -110,10 +110,10 @@
         <Property name="text" type="java.lang.String" value="Semaforo Izq"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIzqActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+    <Component class="javax.swing.JRadioButton" name="btnDer">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>

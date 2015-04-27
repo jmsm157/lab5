@@ -30,8 +30,8 @@ public class Vista extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         spnTiempo = new javax.swing.JSpinner();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        btnIzq = new javax.swing.JRadioButton();
+        btnDer = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         btnIniciar = new javax.swing.JButton();
         txtResultados = new javax.swing.JTextField();
@@ -46,17 +46,17 @@ public class Vista extends javax.swing.JFrame {
 
         spnTiempo.setValue(30);
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText("Semaforo Izq");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(btnIzq);
+        btnIzq.setSelected(true);
+        btnIzq.setText("Semaforo Izq");
+        btnIzq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                btnIzqActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Semaforo Der");
+        buttonGroup1.add(btnDer);
+        btnDer.setText("Semaforo Der");
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel2.setText("Resuldados");
@@ -93,8 +93,8 @@ public class Vista extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
                                 .addComponent(spnTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2)
+                            .addComponent(btnIzq)
+                            .addComponent(btnDer)
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 93, Short.MAX_VALUE))
                     .addComponent(txtResultados1)
@@ -110,9 +110,9 @@ public class Vista extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(spnTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton1)
+                .addComponent(btnIzq)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
+                .addComponent(btnDer)
                 .addGap(13, 13, 13)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -131,9 +131,9 @@ public class Vista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void btnIzqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIzqActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_btnIzqActionPerformed
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
         
@@ -143,6 +143,7 @@ public class Vista extends javax.swing.JFrame {
             Thread.sleep((Integer)spnTiempo.getValue()*1000);
         } catch (InterruptedException e) {
         } 
+        btnDer.isSelected()
         txtResultados.setText("Total de carros en la derecha: " + tiempo.getPuente().getCarrosDer().size());//numero de carros a la derecha
         txtResultados1.setText("Total de carros en la izquierda: " + tiempo.getPuente().getCarrosIzq().size()); 
         txtResultados2.setText("Total de carros bloqueados: " + tiempo.getPuente().getCarrosBloqueados().size());
@@ -185,12 +186,12 @@ public class Vista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton btnDer;
     private javax.swing.JButton btnIniciar;
+    private javax.swing.JRadioButton btnIzq;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JSpinner spnTiempo;
     private javax.swing.JTextField txtResultados;
     private javax.swing.JTextField txtResultados1;
