@@ -141,12 +141,12 @@ public class Vista extends javax.swing.JFrame {
         tiempo.start();
         try {
             Thread.sleep((Integer)spnTiempo.getValue()*1000);
-            txtResultados.setText("Total de carros en la derecha: " + tiempo.getPuente().getCarrosDer().size());//numero de carros a la derecha
-            txtResultados1.setText("Total de carros en la izquierda: " + tiempo.getPuente().getCarrosIzq().size()); 
-            txtResultados2.setText("Total de carros bloqueados: " + tiempo.getPuente().getCarrosBloqueados().size());
-            txtResultados3.setText("Total de carros que cruzaron el puente: " + tiempo.getPuente().getCarrosTerminados().size());
         } catch (InterruptedException e) {
-        }
+        } 
+        txtResultados.setText("Total de carros en la derecha: " + tiempo.getPuente().getCarrosDer().size());//numero de carros a la derecha
+        txtResultados1.setText("Total de carros en la izquierda: " + tiempo.getPuente().getCarrosIzq().size()); 
+        txtResultados2.setText("Total de carros bloqueados: " + tiempo.getPuente().getCarrosBloqueados().size());
+        txtResultados3.setText("Total de carros que cruzaron el puente: " + tiempo.getPuente().getCarrosTerminados().size());
     }//GEN-LAST:event_btnIniciarActionPerformed
 
     /**

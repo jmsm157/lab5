@@ -56,15 +56,13 @@ public class CreadorCarros extends Thread {
              * indicar si se crea o no carro
              */
                 if(valorParaCrear>6){
-                    Carro ladoA=new Carro("der",peso,velocidad,p);
-                    p.addCarroDer(ladoA);                    
-                    ladoA.start();
+                    Carro ladoA=new Carro("der",peso,velocidad);
+                    p.addCarroDer(ladoA);              
                 }
                 else{
                     if(valorParaCrear<6){
-                        Carro ladoB=new Carro("izq",peso,velocidad,p);
-                        p.addCarroIzq(ladoB);
-                        ladoB.start();
+                        Carro ladoB=new Carro("izq",peso,velocidad);
+                        p.addCarroIzq(ladoB);                        
                     }                    
                 }               
             }
